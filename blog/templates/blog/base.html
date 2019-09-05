@@ -8,8 +8,10 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
+        {%if user.is_authenticated %}
        
-        <div class="page-header" >
+        <div class="page-header" ><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
         <h1><a href="/">Mayank's Blog</a></h1>
        </div>
         <div class="content container">
